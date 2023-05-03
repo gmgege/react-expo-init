@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  expo:
+    build: .
+    environment:
+      - REACT_NATIVE_PACKAGER_HOSTNAME=${REACT_NATIVE_PACKAGER_HOSTNAME}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+      - "19006:19006"
